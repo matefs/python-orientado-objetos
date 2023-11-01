@@ -6,9 +6,13 @@ class Conta:
         self.titular = titular
         self.saldo = saldo 
         self.limit = limite
+  
     def extrato(self):
         print(f'Saldo {self.saldo} do titular {self.titular}')
-
+   
+    def deposita(self,valor):
+        self.valor += valor
+    
 conta = Conta(123,"Mateus",100,1000000);
 print(conta)
 print(conta.numero)
