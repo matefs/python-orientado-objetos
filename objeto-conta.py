@@ -12,6 +12,9 @@ class Conta:
    
     def deposita(self,valor):
         self.valor += valor
+
+    def saca(self,valor):
+        self.valor -= valor
     
 conta = Conta(123,"Mateus",100,1000000);
 print(conta)
