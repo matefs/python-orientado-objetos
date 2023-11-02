@@ -9,6 +9,6 @@ def some_calculation_integer(x: int , y: int ) -> int:
 def some_calculation(x: Union[int,float] , y: Union[int,float] ) -> Union[int,float]:
     return ( x + y) **2 
 
-print(some_calculation(4,5))
+print(some_calculation_integer(4,5))
 print(some_calculation(4.1,5))
 
