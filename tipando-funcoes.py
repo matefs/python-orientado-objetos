@@ -14,10 +14,17 @@ print(some_calculation(4.1,5))
 
 
 
+
 # Tipando Retorno de função como tipo none 
 def exemplo() -> None:
     variavel: int = 10
-    return variavel
 
 print(exemplo());
+
+def exemplo2() -> None:
+    variavel: int = 10
+    return variavel
+
+print(exemplo2());
+
 
