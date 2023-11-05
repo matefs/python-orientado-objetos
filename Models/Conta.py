@@ -1,6 +1,6 @@
 class Conta:
     def __init__(self, numero, titular, saldo, limite):
-        print(f"Construindo o objeto {self}")
+        # print(f"Construindo o objeto {self}")
         self.__numero = numero
         self.__titular = titular
         self.__saldo = saldo 
@@ -19,6 +19,6 @@ class Conta:
         if valor <= self.__saldo:
             self.__saldo -= valor
 
-    def transfere(self, valor, origem, destino):
-        origem.saca(valor)
+    def transfere(self, valor, destino):
+        self.saca(valor)
         destino.deposita(valor)
