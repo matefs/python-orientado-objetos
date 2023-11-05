@@ -22,3 +22,17 @@ class Conta:
     def transfere(self, valor, destino):
         self.saca(valor)
         destino.deposita(valor)
+
+    def get_saldo(self):
+        return self.saldo
+
+    def get_titular(self):
+        return self.__titular
+
+    def get_limite(self):
+        return self.__limite
+    
+    def set_limite(self, NovoLimite):
+        if NovoLimite >= 0 and NovoLimite != self.__limite:
+            self.__limite = NovoLimite
+
