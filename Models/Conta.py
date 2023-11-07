@@ -29,10 +29,13 @@ class Conta:
     def get_titular(self):
         return self.__titular
 
-    def get_limite(self):
-        return self.__limite
+    @property 
+    def limite(self):
+        return self.__limite 
     
-    def set_limite(self, NovoLimite):
-        if NovoLimite >= 0 and NovoLimite != self.__limite:
-            self.__limite = NovoLimite
+    @limite.setter
+    def limite(self,limite):
+        self.__limite = limite
+    
 
+    
