@@ -15,9 +15,15 @@ class Conta:
         else:
             return "Valor inválido"
 
+    def __pode_sacar(self,valor_a_sacar):
+        valor_disponivel_a_sacar = (self.__saldo + self.__limite)
+        return valor_a_sacar <= valor_disponivel_a_sacar
+
     def saca(self, valor):
-        if valor <= self.__saldo:
+        if(self.__pode_sacar(valor)):
             self.__saldo -= valor
+        else:
+            print(f'O valor {valor } passou do limite')
 
     def transfere(self, valor, destino):
         self.saca(valor)
