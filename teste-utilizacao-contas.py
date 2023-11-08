@@ -18,7 +18,11 @@ print(f'Transferindo dinheiro da conta para conta2')
 conta.transfere(10,conta2)
 conta.extrato()
 
-print(conta.limite)
+conta.limite = 10000 # acessando setter do limite da conta 
+print(f'acessando limite da conta {conta.limite}')# acessando limite pelo metodo getter
+
+
+
 
 conta.saca(100000000000000000) # Valor passando do limite 
 conta.extrato()  
